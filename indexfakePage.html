@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="Screenshot (15).png" />
+    <title>Anime Quiz</title>
+    <style>
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Set a lower z-index to position the video below other elements */
+      }
+
+      .mainText{
+        margin-top: 70px;
+        color: white;
+        margin-left: 42%;
+      }
+
+      #first{
+  
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    
+      }
+
+      #second{
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    
+      }
+
+      .input-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 180px;
+
+      }
+
+      #second{
+        margin-top: 20px;
+      }
+
+      .button{
+        margin-left: 48%;
+        margin-top: 40px;
+        border-radius: 10px;
+        width: 60px;
+        height: 40px;
+        background-color: blueviolet;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!--უკანა ფონი (ვიდეო)-->
+    <video autoplay loop muted>
+      <source src="LogInBackground.mp4" type="video/mp4" />
+    </video>
+
+    <!--Text-->
+
+<h1 class="mainText">W  E  L  C  O  M  E</h1>
+
+    
+    <!--რეგისტრაციის ფორმა-->
+
+<form action="userLogIn">
+  <div class="labels">
+    <div class="input-group">
+      <input type="user:" placeholder="User" id="first">
+      <input type="password" placeholder="password" id="second">
+     
+    </div>
+  </div>
+</form>
+      </form>
+
+      <a href="indexTest.html">
+      <button class="button">Log In</button>
+    </a>
+  </body>
+</html>

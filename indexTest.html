@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssCode.css">
+    <link rel="icon" type="image/png" href="Screenshot (15).png" />
+    <title>Chat With Me</title>
+
+</head>
+
+<body>
+
+    <h3 id="hi">Hello</h3>
+    <div class="message_container"></div>
+    <form class="send_container">
+        <div class="inputAndButton">
+            <input type="message" id="message-input" placeholder="send me message">
+            <button id="button" value="Send">send</button>
+        </div>
+    </form>
+
+    <!--pirveli pasuxi userisgan-->
+    <div id="answers">
+    </div>
+
+    <!--programa-->
+    <h3 id="fromBot">I know your name;)</h3>
+    <!--meore pasuxi suresigan-->
+    <div id="answerTwo">
+    </div>
+
+    <h3 id="lastAnswerFromBot">Haha You are HACKED!</h3>
+
+
+        <!--something like typing-->
+
+<!--<div id="typing">...</div>-->
+
+        <h3 id="typing" id="flashingText">. . .</h3>
+
+        <video id="Video" src="video.mp4" controls autoplay></video>
+        <button id="quit">exit</button>
+        <button id="stay">stay</button>
+
+
+        <h2 id="letter">
+            We're Still Here - A Friendly Reminder from Your Friendly Hacker
+            Hey there,
+            Just a quick heads up – we're still hanging out in your system. 
+            Thought we'd drop by to remind you that if you're tired of the party, 
+            all you gotta do is close the browser. It's that simple.
+        </h2>
+
+        <h2 id="letter2">Whoa, looks like you stumbled upon some serious hacking skills, right?
+         Nah, just messing with ya! Hope you got a kick out of that little prank. 
+         Remember, stay safe out there in the digital jungle!</h2>
+
+    <script>
+        let userInputCount = 0; // Counter to track user input count
+
+        document.getElementById('button').addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const user_input_value = document.getElementById('message-input').value;
+
+            //visualistvis
+            const messageElement = document.createElement('div');
+            messageElement.textContent = user_input_value;
+            messageElement.style.backgroundColor = "blueviolet"; 
+            messageElement.style.color = "white"; 
+            messageElement.style.padding = "10px";
+            messageElement.style.borderRadius = "20px"; 
+            messageElement.style.marginTop = "150px";
+            console.log(messageElement);
+
+            const answersContainer = document.getElementById("answers");
+            answersContainer.appendChild(messageElement);
+
+            //pasuxi programisgan
+            const program = document.getElementById("fromBot");
+            program.style.display = 'block';
+            console.log(program);
+
+            document.getElementById("message-input").value = ""; // gasuftaveba
+            userInputCount++; // Increment user input count
+
+            // useris bolo pasuxi :)
+            answersContainer.style.display = 'block';
+
+            console.log(answersContainer);
+
+            //bolo pasuxi botisgan
+            const bolo = document.getElementById("lastAnswerFromBot");
+
+            //typing
+            if (userInputCount === 2) { // Check if it's the second user input
+                const wera = document.getElementById("typing");
+                wera.style.display = "block"; // Display "wera" message
+                wera.style.marginTop = "100px";
+            }
+
+            setTimeout(() => {
+        bolo.style.display = "block";
+        const weraInTimeout = document.getElementById("typing");
+        if (weraInTimeout) {
+            weraInTimeout.style.display = "none"; // Remove "wera" message
+        }
+    }, 10000);
+
+      if(bolo){
+         setTimeout(() => {
+        const video  = document.getElementById("Video");
+        video.style.display = "block";
+
+   
+      },12000)
+     
+      }
+            
+      function showButtons() {
+            document.getElementById("quit").style.display = "block";
+            document.getElementById("stay").style.display = "block";
+        }
+
+        setTimeout(showButtons, 25000); 
+        });
+
+        document.getElementById('quit').addEventListener('click', function (event){
+            const letter1 = document.getElementById("letter");
+            letter1.style.display = "block";  
+
+            const video = document.getElementById("Video");
+            const quit = document.getElementById("quit");
+            const stay = document.getElementById("stay");
+            const answersContainer = document.getElementById("answers");
+            const program = document.getElementById("fromBot");
+            const bolo = document.getElementById("lastAnswerFromBot");
+            const hi = document.getElementById("hi");
+            const input = document.getElementById("message-input");
+            const InputButton = document.getElementById("button");
+
+           
+            if(video){
+                video.style.display = "none";
+                video.muted = true;
+                quit.style.display ="none";
+                stay.style.display = "none";
+                answersContainer.style.display = "none";
+                program.style.display = "none";
+                bolo.style.display = "none";
+                hi.style.display = "none";
+                input.style.display = "none";
+                InputButton.style.display = "none";
+            }
+        
+        })
+
+
+
+        // stay button
+
+
+
+        document.getElementById('stay').addEventListener('click', function (event){
+            const letter1 = document.getElementById("letter2");
+            letter1.style.display = "block";  
+
+            const video = document.getElementById("Video");
+            const quit = document.getElementById("quit");
+            const stay = document.getElementById("stay");
+            const answersContainer = document.getElementById("answers");
+            const program = document.getElementById("fromBot");
+            const bolo = document.getElementById("lastAnswerFromBot");
+            const hi = document.getElementById("hi");
+            const input = document.getElementById("message-input");
+            const InputButton = document.getElementById("button");
+
+           
+            if(video){
+                video.style.display = "none";
+                video.muted = true;
+                quit.style.display ="none";
+                stay.style.display = "none";
+                answersContainer.style.display = "none";
+                program.style.display = "none";
+                bolo.style.display = "none";
+                hi.style.display = "none";
+                input.style.display = "none";
+                InputButton.style.display = "none";
+            }
+        
+        })
+
+
+    </script>
+</body>
+</html>
